@@ -13,7 +13,7 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2?t
 
 ## Introduction
 
-**Weather App** is a simple app to learn React.js and get practice about its concepts. With basic components and API's requests/responses we will have a functonal application.
+**Weather App** is a simple app to learn React.js and get practice about its concepts. With basic components and API's requests/responses we will have a functional application.
 
 ---
 
