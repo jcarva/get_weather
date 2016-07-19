@@ -1,4 +1,4 @@
-<a href="https://www.python.org//">
+<a href="http://www.nytimes.com/weather/">
     <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="python_logo" title="Python Programmin Language" align="right" />
 </a>
 
