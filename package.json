@@ -4,8 +4,8 @@
   "description": "Simple project to learn about React.js and its concepts.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "webpack-dev-server --inline --content-base --history-api-fallback",
+    "production": "webpack -p"
   },
   "repository": {
     "type": "git",
