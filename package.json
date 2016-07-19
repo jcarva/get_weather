@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jcarva/weather_app#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^2.22.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
