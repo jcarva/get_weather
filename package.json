@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/jcarva/weather_app/issues"
   },
-  "homepage": "https://github.com/jcarva/weather_app#readme"
+  "homepage": "https://github.com/jcarva/weather_app#readme",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
 }
