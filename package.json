@@ -4,7 +4,7 @@
   "description": "Simple project to learn about React.js and its concepts.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --content-base --history-api-fallback",
+    "start": "webpack-dev-server --inline --content-base --history-api-fallback",
     "production": "webpack -p"
   },
   "repository": {
