@@ -1,4 +1,5 @@
 import React from 'react'
+require("../assets/sass/style.css");
 
 const Live = (props) => {
   return (
