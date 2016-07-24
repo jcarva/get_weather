@@ -3,17 +3,34 @@ import ReactDOM from 'react-dom'
 
 const Live = (props) => {
   return (
-    <div>{props.name}</div>
+    <div>
+      {props.name}
+      <input
+        type="text"
+        onChange={props.onUpdateUser}
+        value={props.username}
+      />
+
+    </div>
   )
 }
 
 class User extends React.Component {
   constructor(props){
     super(props);
+
+    this.state = {username: ''};
   }
+
+  handleUpdateUser = (e) => {
+    this.setState({username: e.target.value});
+  }
+
   render() {
     return (
-        <Live {...this.props}/>
+      <div>
+        <Live {...this.props} onUpdateUser={ this.handleUpdateUser } />
+      </div>
     )
   }
 }
