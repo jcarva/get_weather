@@ -13,6 +13,7 @@ export default class Main extends React.Component {
     return (
       <div>
         <Live name="Jota"/>
+        {this.props.children}
       </div>
     )
   }
