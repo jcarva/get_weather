@@ -2,7 +2,7 @@ html,
 body,
 #app {
   width: 100%;
-  height: 98%;
+  height: 98.5%;
   margin: 0;
   padding: 0; }
 
@@ -10,6 +10,18 @@ body,
   width: 100%;
   height: 95%;
   font-weight: bold; }
+
+#menu {
+  padding: 10px;
+  background: red;
+  background: -webkit-linear-gradient(left, #024287, #0EB0D3);
+  background: -o-linear-gradient(right, #024287, #0EB0D3);
+  background: -moz-linear-gradient(right, #024287, #0EB0D3);
+  background: linear-gradient(to right, #024287, #0EB0D3); }
+  #menu h1 {
+    margin: 0 !important;
+    color: #ffffff;
+    display: inline; }
 
 #home {
   background: url("http://www.intrawallpaper.com/static/images/abstract-mosaic-background.png");
