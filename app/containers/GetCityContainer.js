@@ -25,9 +25,14 @@ export default class GetCityContainer extends React.Component {
     return(
       <GetCity
         city = {this.state.city}
+        direction = {this.props.direction}
         onUpdateCity = {this.handleUpdateCity}
         onSubmitCity = {this.handleSubmitCity}
       />
     )
   };
 }
+
+GetCityContainer.defaultProps = {
+  direction: 'column'
+};

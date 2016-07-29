@@ -1,10 +1,12 @@
 import React from 'react'
+import GetCityContainer from './GetCityContainer'
 require("../assets/sass/style.css");
 
 const Menu = (props) => {
   return (
     <div id="menu">
       <h1>{props.title}</h1>
+      <GetCityContainer direction="row"/>
     </div>
   )
 }
