@@ -41,8 +41,13 @@ body,
     font-weight: 100;
     margin: 20px; }
 
-button {
-  color: #009BFF !important;
-  font-weight: bold !important; }
+.get-city {
+  display: flex; }
+  .get-city button {
+    color: #009BFF !important;
+    font-weight: bold !important;
+    margin: 10px; }
+  .get-city input {
+    margin: auto; }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,18 +15,19 @@ const InputField = (props) => {
       className='form-control'
       onChange={props.onUpdateCity}
       placeholder='San Diego, California'
-      type='text'/>
+      type='text'
+      value={props.city}
+    />
   )
 };
 
 const GetCity = (props) => {
   return(
-    <div className="text-center">
+    <div className="get-city text-center" style={{flexDirection: props.direction}}>
       <InputField
         onUpdateCity={props.onUpdateCity}
         city={props.city}
       />
-      <br/>
       <Button
         onSubmitCity={props.onSubmitCity}
       >Get Weather</Button>
@@ -36,10 +37,13 @@ const GetCity = (props) => {
 
 GetCity.propTypes = {
   city: React.PropTypes.string.isRequired,
+  direction: React.PropTypes.string.isRequired,
   onUpdateCity: React.PropTypes.func.isRequired,
   onSubmitCity: React.PropTypes.func.isRequired
 };
 
-
+GetCity.defaultProps = {
+  direction: 'column'
+};
 
 export default GetCity;
