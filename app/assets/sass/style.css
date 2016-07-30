@@ -19,9 +19,6 @@ body,
   background: linear-gradient(to right, #024287, #0EB0D3);
   display: flex;
   justify-content: space-between; }
-  #menu h1 {
-    margin: auto 10px !important;
-    color: #ffffff; }
 
 #home {
   background: url("http://www.intrawallpaper.com/static/images/abstract-mosaic-background.png");
@@ -49,5 +46,13 @@ body,
     margin: 10px; }
   .get-city input {
     margin: auto; }
+
+.logo {
+  display: flex; }
+  .logo h1 {
+    margin: auto;
+    color: #ffffff; }
+  .logo a {
+    margin: auto 10px; }
 
 /*# sourceMappingURL=style.css.map */
