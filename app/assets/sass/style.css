@@ -19,6 +19,9 @@ body,
   background: linear-gradient(to right, #024287, #0EB0D3);
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 500px) {
+    #menu h1 {
+      font-size: 0px; } }
 
 #home {
   background: url("http://www.intrawallpaper.com/static/images/abstract-mosaic-background.png");
@@ -50,7 +53,7 @@ body,
 .logo {
   display: flex; }
   .logo h1 {
-    margin: auto;
+    margin: auto 5px;
     color: #ffffff; }
   .logo a {
     margin: auto 10px; }

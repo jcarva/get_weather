@@ -22,6 +22,10 @@ body,
   background: linear-gradient(to right, $blue_menu , $green_menu) /* Standard syntax */
   display: flex
   justify-content: space-between
+  h1
+    @media only screen and (max-width: 500px)
+      font-size: 0px
+
 
 #home
   background: url("http://www.intrawallpaper.com/static/images/abstract-mosaic-background.png")
@@ -54,7 +58,7 @@ body,
 .logo
   display: flex
   h1
-    margin: auto
+    margin: auto 5px
     color: #ffffff
   a
     margin: auto 10px
