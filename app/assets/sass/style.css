@@ -19,7 +19,7 @@ body,
   background: linear-gradient(to right, #024287, #0EB0D3);
   display: flex;
   justify-content: space-between; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 540px) {
     #menu h1 {
       font-size: 0px; } }
 
@@ -54,7 +54,8 @@ body,
   display: flex; }
   .logo h1 {
     margin: auto 5px;
-    color: #ffffff; }
+    color: #ffffff;
+    font-family: Impact; }
   .logo a {
     margin: auto 10px; }
 

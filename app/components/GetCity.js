@@ -13,10 +13,10 @@ const InputField = (props) => {
   return(
     <input
       className='form-control'
-      onChange={props.onUpdateCity}
       placeholder='San Diego, California'
       type='text'
-      //value={props.city}
+      onChange={props.onUpdateCity}
+      value={props.city}
     />
   )
 };

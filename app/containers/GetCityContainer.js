@@ -11,9 +11,9 @@ export default class GetCityContainer extends React.Component {
   }
 
   handleUpdateCity = (e) => {
-    this.state = {
+    this.setState ({
      city: e.target.value
-    }
+    });
   };
 
   handleSubmitCity = (e) => {

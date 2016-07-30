@@ -6,7 +6,7 @@ require("../assets/sass/style.css");
 const Menu = (props) => {
   return (
     <div id="menu">
-      <Logo title="Weather App"/>
+      <Logo title="GetWeather"/>
       <GetCityContainer direction="row"/>
     </div>
   )
