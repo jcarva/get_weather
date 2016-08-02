@@ -1,5 +1,5 @@
 <a href="http://www.nytimes.com/weather/">
-    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="python_logo" title="Python Programmin Language" align="right" />
+    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun_cloud_image" title="Weather App" align="right" />
 </a>
 
 **Pet-project. Use at your own risk. Low test coverage ratio.**

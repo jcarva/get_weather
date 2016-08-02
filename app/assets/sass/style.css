@@ -1,0 +1,62 @@
+html,
+body,
+#app {
+  width: 100%;
+  height: 98.5%;
+  margin: 0;
+  padding: 0; }
+
+#main {
+  width: 100%;
+  height: 95%;
+  font-weight: bold; }
+
+#menu {
+  background: red;
+  background: -webkit-linear-gradient(left, #024287, #0EB0D3);
+  background: -o-linear-gradient(right, #024287, #0EB0D3);
+  background: -moz-linear-gradient(right, #024287, #0EB0D3);
+  background: linear-gradient(to right, #024287, #0EB0D3);
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (max-width: 540px) {
+    #menu h1 {
+      font-size: 0px; } }
+
+#home {
+  background: url("http://www.intrawallpaper.com/static/images/abstract-mosaic-background.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%; }
+  #home h1 {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 100;
+    margin: 20px; }
+
+.get-city {
+  display: flex; }
+  .get-city button {
+    color: #009BFF !important;
+    font-weight: bold !important;
+    margin: 10px; }
+  .get-city input {
+    margin: auto; }
+
+.logo {
+  display: flex; }
+  .logo h1 {
+    margin: auto 5px;
+    color: #ffffff;
+    font-family: Impact; }
+  .logo a {
+    margin: auto 10px; }
+
+/*# sourceMappingURL=style.css.map */

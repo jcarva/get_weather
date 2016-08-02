@@ -1,0 +1,66 @@
+$blue_menu: #024287
+$green_menu: #0EB0D3
+
+html,
+body,
+#app
+  width: 100%
+  height: 98.5%
+  margin: 0
+  padding: 0
+
+#main
+  width: 100%
+  height: 95%
+  font-weight: bold
+
+#menu
+  background: red /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $blue_menu , $green_menu) /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $blue_menu, $green_menu) /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $blue_menu, $green_menu) /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $blue_menu , $green_menu) /* Standard syntax */
+  display: flex
+  justify-content: space-between
+  h1
+    @media only screen and (max-width: 540px)
+      font-size: 0px
+
+
+#home
+  background: url("http://www.intrawallpaper.com/static/images/abstract-mosaic-background.png")
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  width: 100%
+  height: 100%
+  h1
+    font-size: 40px
+    color: #ffffff
+    font-weight: 100
+    margin: 20px
+
+.get-city
+  display: flex
+  button
+    color: #009BFF !important
+    font-weight: bold !important
+    margin: 10px
+
+  input
+    margin: auto
+
+.logo
+  display: flex
+  h1
+    margin: auto 5px
+    color: #ffffff
+    font-family: Impact
+  a
+    margin: auto 10px
+
