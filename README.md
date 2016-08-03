@@ -1,10 +1,10 @@
 <a href="http://www.nytimes.com/weather/">
-    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun_cloud_image" title="Weather App" align="right" />
+    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun_cloud_image" title="GetWeather" align="right" />
 </a>
 
 **Pet-project. Use at your own risk. Low test coverage ratio.**
 
-# Weather App
+# GetWeather
 
 **Have a question or suggestion?**																												
 Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2?trk=nav_responsive_tab_profile_pic), send an email to jaelsoncarvalhojr@gmail.com, or create a pull request in this project.
@@ -13,7 +13,7 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2?t
 
 ## Introduction
 
-**Weather App** is a simple app to learn React.js and get practice about its concepts. With basic components and API's requests/responses we will have a functional application.
+**GetWeather** is a simple app to learn React.js and get practice about its concepts. With basic components and API's requests/responses we will have a functional application.
 
 ---
 
