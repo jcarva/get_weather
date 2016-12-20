@@ -29,7 +29,7 @@ var getCurrentCityWeather = (city) => {
     })
 };
 
-var getCityDailyForecast = (city) => {
+var getCityForecast = (city) => {
   return Axios.get(setUrl('forecast/daily', setQueryData(city)))
     .then(function (cityDailyForecastData) {
       console.log(cityDailyForecastData.data)
@@ -38,5 +38,5 @@ var getCityDailyForecast = (city) => {
 
 export const WeatherAPIHelpers = {
   getCurrentCityWeather: getCurrentCityWeather,
-  getCityDailyForecast: getCityDailyForecast
+  getCityForecast: getCityForecast
 };
