@@ -20,15 +20,23 @@ var queryDataParser = (queryStringData) => {
 
 var setUrl = (query_type, queryStringData) => {
   return base_url_api + query_type + '?' + queryDataParser(queryStringData);
-}
+};
 
 var getCurrentCityWeather = (city) => {
   return Axios.get(setUrl('weather', setQueryData(city)))
-    .then(function (currentWeatherData) {
-      console.log(currentWeatherData.data)
+    .then(function (currentCityWeatherData) {
+      console.log(currentCityWeatherData.data)
+    })
+};
+
+var getCityDailyForecast = (city) => {
+  return Axios.get(setUrl('forecast/daily', setQueryData(city)))
+    .then(function (cityDailyForecastData) {
+      console.log(cityDailyForecastData.data)
     })
 };
 
 export const WeatherAPIHelpers = {
-  getCurrentCityWeather: getCurrentCityWeather
+  getCurrentCityWeather: getCurrentCityWeather,
+  getCityDailyForecast: getCityDailyForecast
 };

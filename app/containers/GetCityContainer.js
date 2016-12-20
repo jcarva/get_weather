@@ -19,7 +19,8 @@ export default class GetCityContainer extends React.Component {
 
   handleSubmitCity = (e) => {
     e.preventDefault();
-    console.log(WeatherAPIHelpers.getCurrentCityWeather(this.state.city));
+    console.log('getCurrentCityWeather :', WeatherAPIHelpers.getCurrentCityWeather(this.state.city));
+    console.log('getCityDailyForecast :', WeatherAPIHelpers.getCityDailyForecast(this.state.city));
   };
 
   render(){
