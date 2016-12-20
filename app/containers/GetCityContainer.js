@@ -1,5 +1,6 @@
 import React from 'react'
 import GetCity from '../components/GetCity'
+import { WeatherAPIHelpers } from '../utils/WeatherAPIHelpers'
 
 export default class GetCityContainer extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ export default class GetCityContainer extends React.Component {
   handleSubmitCity = (e) => {
     e.preventDefault();
     console.log(this.state.city);
+    console.log(WeatherAPIHelpers.getCurrentCityWeather(this.state.city));
   };
 
   render(){
