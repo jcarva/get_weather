@@ -1,10 +1,11 @@
 import React from 'react'
+const sun_cloud_image = require('../assets/images/logo.png');
 
 const Logo = (props) => {
   return (
     <div className="logo text-center" style={{flexDirection: props.direction}}>
       <a href="http://www.nytimes.com/weather/">
-        <img style={{maxWidth: props.size}} src="/app/assets/images/cover.png" alt="sun_cloud_image" title="Weather App"/>
+        <img src={sun_cloud_image} style={{maxWidth: props.size}} alt="sun_cloud_image" title="Get Weather"/>
       </a>
       <h1>{props.title}</h1>
     </div>
