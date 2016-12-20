@@ -1,5 +1,5 @@
 {
-  "name": "weather_app",
+  "name": "get_weather",
   "version": "1.0.0",
   "description": "Simple project to learn about React.js and its concepts.",
   "main": "index.js",
@@ -9,9 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcarva/weather_app.git"
+    "url": "git+https://github.com/jcarva/get_weather.git"
   },
   "keywords": [
+    "get",
     "weather",
     "react",
     "app"
@@ -19,9 +20,9 @@
   "author": "Jaelson Carvalho <jaelsoncarvalhojr@gmail.com> (https://github.com/jcarva)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/jcarva/weather_app/issues"
+    "url": "https://github.com/jcarva/get_weather/issues"
   },
-  "homepage": "https://github.com/jcarva/weather_app#readme",
+  "homepage": "https://github.com/jcarva/get_weather#readme",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
@@ -29,12 +30,15 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "favicons-webpack-plugin": "0.0.7",
+    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-router": "^2.6.0"
