@@ -2,12 +2,26 @@ import React from 'react'
 import GetCity from '../components/GetCity'
 
 export default class GetCityContainer extends React.Component {
-  constructor(props) {
-    super(props);
+  /*
+   Instead of providing a separate getInitialState
+   method, you can set up your own state property in the constructor.
+   (https://facebook.github.io/react/docs/reusable-components.html)
+  */
+  constructor(props, context) {
+    /*
+     The 'props' is necessary to use the 'this' inside of the constructor, the component inherits of the React.Component
+    */
+    super(props, context);
 
     this.state = {
       city: ''
-    }
+    };
+
+    /*
+     this.context.router is undefined in ES6 class constructor.
+     (https://github.com/reactjs/react-router/issues/1059)
+    */
+    context.router
   }
 
   handleUpdateCity = (e) => {
