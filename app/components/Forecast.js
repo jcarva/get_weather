@@ -19,7 +19,7 @@ const ForecastUI = (props) => {
       <div className="forecast-container">
         {props.forecastData.list.map(function (forecastDay) {
           return (
-            <DayUI day={forecastDay}/>
+            <DayUI key={forecastDay.dt} day={forecastDay}/>
           )
         })}
       </div>
@@ -35,7 +35,6 @@ const Forecast = (props) => {
       </div>
     )
   } else {
-    //console.log(props);
     return (
       <div id="forecast">
         <ForecastUI forecastData={props.forecastData}/>
