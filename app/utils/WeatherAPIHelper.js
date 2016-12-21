@@ -25,18 +25,18 @@ var setUrl = (query_type, queryStringData) => {
 var getCurrentCityWeather = (city) => {
   return Axios.get(setUrl('weather', setQueryData(city)))
     .then(function (currentCityWeatherData) {
-      console.log(currentCityWeatherData.data)
+      return currentCityWeatherData.data
     })
 };
 
 var getCityForecast = (city) => {
   return Axios.get(setUrl('forecast/daily', setQueryData(city)))
     .then(function (cityDailyForecastData) {
-      console.log(cityDailyForecastData.data)
+      return cityDailyForecastData.data
     })
 };
 
-export const WeatherAPIHelpers = {
+export const WeatherAPIHelper = {
   getCurrentCityWeather: getCurrentCityWeather,
   getCityForecast: getCityForecast
 };
