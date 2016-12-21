@@ -1,13 +1,41 @@
 import React from 'react'
 import Forecast from '../components/Forecast'
-import { WeatherAPIHelpers } from '../utils/WeatherAPIHelpers'
+import { WeatherAPIHelper } from '../utils/WeatherAPIHelper'
 
 export default class ForecastContainer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoading: true,
+      forecastData: {}
+    }
+  }
+
+  forecastRequest = (city) => {
+    WeatherAPIHelper.getCityForecast(city)
+      .then(function (cityForecastData) {
+        this.setState({
+          isLoading: false,
+          forecastData: cityForecastData
+        });
+      }.bind(this))
+  };
+
+  componentDidMount () {
+    this.forecastRequest(this.props.routeParams.city)
+  }
+
+  componentWillReceiveProps (nextProps) {
+    this.forecastRequest(nextProps.routeParams.city)
+  }
+
   render() {
-    console.log(this.props);
     return(
       <Forecast
-        city={this.props.params.city}
+        city={this.props.routeParams.city}
+        isLoading={this.state.isLoading}
+        forecastData={this.state.forecastData}
       />
     )
   }
