@@ -1,6 +1,5 @@
 import React from 'react'
 import GetCity from '../components/GetCity'
-import { WeatherAPIHelpers } from '../utils/WeatherAPIHelpers'
 
 export default class GetCityContainer extends React.Component {
   constructor(props) {
@@ -19,8 +18,9 @@ export default class GetCityContainer extends React.Component {
 
   handleSubmitCity = (e) => {
     e.preventDefault();
-    console.log('getCurrentCityWeather :', WeatherAPIHelpers.getCurrentCityWeather(this.state.city));
-    console.log('getCityForecast :', WeatherAPIHelpers.getCityForecast(this.state.city));
+    if(this.state.city != '') {
+      this.context.router.push('/forecast/' + this.state.city)
+    }
   };
 
   render(){
@@ -34,7 +34,18 @@ export default class GetCityContainer extends React.Component {
     )
   };
 }
-
+/*
+ using ES6+, specify defaultProps in class
+ (http://blog.revathskumar.com/2016/02/reactjs-writing-in-es6.html)
+ */
 GetCityContainer.defaultProps = {
   direction: 'column'
+};
+
+/*
+ using ES6+, specify contextTypes in class
+ (http://blog.revathskumar.com/2016/02/reactjs-writing-in-es6.html)
+ */
+GetCityContainer.contextTypes = {
+  router: React.PropTypes.object.isRequired
 };
