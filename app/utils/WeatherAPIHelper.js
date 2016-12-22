@@ -8,7 +8,7 @@ var setQueryData = (city) => {
     q: city,
     type: 'accurate',
     APPID: api_key,
-    cnt: 5
+    cnt: 6
   }
 };
 

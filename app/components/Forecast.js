@@ -3,7 +3,7 @@ import { WeatherIcons } from '../utils/WeatherIcons'
 
 const DayUI = (props) => {
   return(
-    <div className="daily-forecast-container">
+    <div className="daily-forecast-container col-lg-3 col-centered">
       <img src={WeatherIcons[props.day.weather["0"].icon]} alt="daily weather"/>
       <h2>{props.day.dt}</h2>
     </div>
