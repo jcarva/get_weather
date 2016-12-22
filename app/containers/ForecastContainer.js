@@ -3,14 +3,27 @@ import Forecast from '../components/Forecast'
 import { WeatherAPIHelper } from '../utils/weatherAPIHelper'
 
 export default class ForecastContainer extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
 
     this.state = {
       isLoading: true,
       forecastData: {}
     }
+
+    /*
+     this.context.router is undefined in ES6 class constructor.
+     (https://github.com/reactjs/react-router/issues/1059)
+     */
+    context.router
   }
+
+  handleClickDetail = (e) => {
+    e.preventDefault();
+    if(this.props.routeParams.city != '') {
+      this.context.router.push('/detail/' + this.props.routeParams.city)
+    }
+  };
 
   forecastRequest = (city) => {
     WeatherAPIHelper.getCityForecast(city)
@@ -36,7 +49,15 @@ export default class ForecastContainer extends React.Component {
         city={this.props.routeParams.city}
         isLoading={this.state.isLoading}
         forecastData={this.state.forecastData}
+        onClickDetail={this.handleClickDetail}
       />
     )
   }
 }
+/*
+ using ES6+, specify contextTypes in class
+ (http://blog.revathskumar.com/2016/02/reactjs-writing-in-es6.html)
+ */
+ForecastContainer.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
