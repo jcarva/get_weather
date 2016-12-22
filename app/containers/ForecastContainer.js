@@ -19,9 +19,11 @@ export default class ForecastContainer extends React.Component {
   }
 
   handleClickDetail = (e) => {
-    e.preventDefault();
     if(this.props.routeParams.city != '') {
-      this.context.router.push('/detail/' + this.props.routeParams.city)
+      this.context.router.push({
+        pathname: '/detail/' + this.props.routeParams.city,
+        state: { weather: e }
+      })
     }
   };
 
