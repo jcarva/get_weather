@@ -1,16 +1,5 @@
 import React from 'react'
-import { WeatherIcons } from '../utils/weatherIcons'
-import { WeatherDateParser } from '../utils/weatherDateParser'
-
-
-const DayUI = (props) => {
-  return(
-    <div className="daily-forecast-container col-lg-3 col-centered" onClick={props.onClickDetail}>
-      <img src={WeatherIcons[props.day.weather["0"].icon]} alt="daily weather"/>
-      <h2>{WeatherDateParser(props.day.dt)}</h2>
-    </div>
-  )
-};
+import DayUI from '../components/Day'
 
 const ForecastUI = (props) => {
   return (
@@ -46,7 +35,6 @@ const Forecast = (props) => {
 };
 
 Forecast.propTypes = {
-  city: React.PropTypes.string.isRequired,
   isLoading: React.PropTypes.bool.isRequired,
   forecastData: React.PropTypes.object.isRequired,
   onClickDetail: React.PropTypes.func.isRequired

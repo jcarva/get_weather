@@ -9,7 +9,7 @@ export default class ForecastContainer extends React.Component {
     this.state = {
       isLoading: true,
       forecastData: {}
-    }
+    };
 
     /*
      this.context.router is undefined in ES6 class constructor.
@@ -48,7 +48,6 @@ export default class ForecastContainer extends React.Component {
   render() {
     return(
       <Forecast
-        city={this.props.routeParams.city}
         isLoading={this.state.isLoading}
         forecastData={this.state.forecastData}
         onClickDetail={this.handleClickDetail}
