@@ -6,6 +6,7 @@ var api_key = '1c03cb992b00253b570f4d85483502fc';
 var setQueryData = (city) => {
   return {
     q: city,
+    units: 'metric',
     type: 'accurate',
     APPID: api_key,
     cnt: 6

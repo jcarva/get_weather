@@ -1,11 +1,13 @@
 import React from 'react'
-import { WeatherIcons } from '../utils/WeatherIcons'
+import { WeatherIcons } from '../utils/weatherIcons'
+import { WeatherDateParser } from '../utils/weatherDateParser'
+
 
 const DayUI = (props) => {
   return(
     <div className="daily-forecast-container col-lg-3 col-centered">
       <img src={WeatherIcons[props.day.weather["0"].icon]} alt="daily weather"/>
-      <h2>{props.day.dt}</h2>
+      <h2>{WeatherDateParser(props.day.dt)}</h2>
     </div>
   )
 };

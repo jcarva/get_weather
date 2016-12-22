@@ -1,6 +1,6 @@
 import React from 'react'
 import Forecast from '../components/Forecast'
-import { WeatherAPIHelper } from '../utils/WeatherAPIHelper'
+import { WeatherAPIHelper } from '../utils/weatherAPIHelper'
 
 export default class ForecastContainer extends React.Component {
   constructor(props) {
