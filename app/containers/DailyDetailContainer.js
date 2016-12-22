@@ -4,7 +4,10 @@ import DailyDetail from '../components/DailyDetail'
 export default class DailyDetailContainer extends React.Component {
   render() {
     return(
-      <DailyDetail/>
+      <DailyDetail
+        weather={this.props.location.state.weather}
+        city={this.props.location.state.city}
+      />
     )
   }
 }

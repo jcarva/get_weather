@@ -22,7 +22,10 @@ export default class ForecastContainer extends React.Component {
     if(this.props.routeParams.city != '') {
       this.context.router.push({
         pathname: '/detail/' + this.props.routeParams.city,
-        state: { weather: e }
+        state: {
+          weather: e,
+          city: this.state.forecastData.city.name
+        }
       })
     }
   };

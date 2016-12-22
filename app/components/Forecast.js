@@ -5,12 +5,14 @@ const ForecastUI = (props) => {
   return (
     <div className="container">
       <div className="row text-center">
-        <h1 id="forecast-header">{props.forecastData.city.name}</h1>
+        <h1 className="forecast-header">{props.forecastData.city.name}</h1>
       </div>
       <div className="forecast-container">
         {props.forecastData.list.map(function (forecastDay) {
           return (
-            <DayUI key={forecastDay.dt} day={forecastDay} onClickDetail={props.onClickDetail.bind(null, forecastDay)}/>
+            <div className="col-lg-3 col-centered">
+              <DayUI key={forecastDay.dt} day={forecastDay} onClickDetail={props.onClickDetail.bind(null, forecastDay)}/>
+            </div>
           )
         })}
       </div>
