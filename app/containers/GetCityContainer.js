@@ -1,14 +1,27 @@
 import React from 'react'
 import GetCity from '../components/GetCity'
-import { WeatherAPIHelpers } from '../utils/WeatherAPIHelpers'
 
 export default class GetCityContainer extends React.Component {
-  constructor(props) {
-    super(props);
+  /*
+   Instead of providing a separate getInitialState
+   method, you can set up your own state property in the constructor.
+   (https://facebook.github.io/react/docs/reusable-components.html)
+  */
+  constructor(props, context) {
+    /*
+     The 'props' is necessary to use the 'this' inside of the constructor, the component inherits of the React.Component
+    */
+    super(props, context);
 
     this.state = {
       city: ''
-    }
+    };
+
+    /*
+     this.context.router is undefined in ES6 class constructor.
+     (https://github.com/reactjs/react-router/issues/1059)
+    */
+    context.router
   }
 
   handleUpdateCity = (e) => {
@@ -19,8 +32,9 @@ export default class GetCityContainer extends React.Component {
 
   handleSubmitCity = (e) => {
     e.preventDefault();
-    console.log('getCurrentCityWeather :', WeatherAPIHelpers.getCurrentCityWeather(this.state.city));
-    console.log('getCityForecast :', WeatherAPIHelpers.getCityForecast(this.state.city));
+    if(this.state.city != '') {
+      this.context.router.push('/forecast/' + this.state.city)
+    }
   };
 
   render(){
@@ -34,7 +48,18 @@ export default class GetCityContainer extends React.Component {
     )
   };
 }
-
+/*
+ using ES6+, specify defaultProps in class
+ (http://blog.revathskumar.com/2016/02/reactjs-writing-in-es6.html)
+ */
 GetCityContainer.defaultProps = {
   direction: 'column'
+};
+
+/*
+ using ES6+, specify contextTypes in class
+ (http://blog.revathskumar.com/2016/02/reactjs-writing-in-es6.html)
+ */
+GetCityContainer.contextTypes = {
+  router: React.PropTypes.object.isRequired
 };

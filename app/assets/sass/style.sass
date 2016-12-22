@@ -5,7 +5,7 @@ html,
 body,
 #app
   width: 100%
-  height: 98.5%
+  height: 100%
   margin: 0
   padding: 0
 
@@ -15,7 +15,7 @@ body,
   font-weight: bold
 
 #menu
-  background: red /* For browsers that do not support gradients */
+  background: $blue_menu /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, $blue_menu , $green_menu) /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, $blue_menu, $green_menu) /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, $blue_menu, $green_menu) /* For Firefox 3.6 to 15 */
@@ -24,7 +24,7 @@ body,
   justify-content: space-between
   h1
     @media only screen and (max-width: 540px)
-      font-size: 0px
+      font-size: 0
 
 
 #home
@@ -64,3 +64,51 @@ body,
   a
     margin: auto 10px
 
+#forecast
+  //background: #4CAF50
+  //width: 100%
+  //height: 100%
+
+.forecast-header
+  font-weight: bold
+  margin: 30px auto 0 auto
+  @media screen and (min-width: 520px)
+    font-size: 65px
+    margin: 30px auto 10px auto
+
+.forecast-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-direction: row
+  flex-wrap: wrap
+  margin: 0 auto
+
+.daily-forecast-container
+  cursor: pointer
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin: 20px 0
+  padding: 30px
+  border-radius: 8px
+  h2
+    font-weight: 100
+    @media screen and (min-width: 520px)
+      font-size: 35px
+
+.col-centered
+  margin: 20px 1.5%
+  @media only screen and (max-width: 690px)
+    font-size: 0
+    float: none
+    margin: 20px auto
+
+.daily-forecast-description
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin: 0
+  padding: 0
+  border-radius: 8px
