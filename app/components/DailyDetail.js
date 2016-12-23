@@ -1,5 +1,6 @@
 import React from 'react'
 import DayUI from '../components/Day'
+import { SingleComponentContainer } from '../components/Containers'
 
 var DetailDecription = (props) => {
   return(
@@ -14,15 +15,14 @@ var DetailDecription = (props) => {
 
 var DailyDetail = (props) => {
   return(
-    <div className="container">
-      <div className="row text-center">
-        <h1 className="forecast-header">{props.city}</h1>
-        <div className="col-centered">
-          <DayUI day={props.weather} background_color="#fff" icon_height={180}/>
-          <DetailDecription weather={props.weather}/>
-        </div>
+    <SingleComponentContainer>
+      <h1 className="forecast-header">{props.city}</h1>
+      <div className="col-centered">
+        <DayUI day={props.weather} background_color="#fff" icon_height={180}/>
+        <DetailDecription weather={props.weather}/>
       </div>
-    </div>
+    </SingleComponentContainer>
+
   )
 };
 
