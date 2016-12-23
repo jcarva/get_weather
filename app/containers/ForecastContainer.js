@@ -41,7 +41,9 @@ export default class ForecastContainer extends React.Component {
   };
 
   componentDidMount () {
-    this.forecastRequest(this.props.routeParams.city)
+    setTimeout(function () { //Only for case study
+      this.forecastRequest(this.props.routeParams.city)
+    }.bind(this),2000)
   }
 
   componentWillReceiveProps (nextProps) {
