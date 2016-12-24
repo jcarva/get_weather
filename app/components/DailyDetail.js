@@ -15,14 +15,15 @@ var DetailDecription = (props) => {
 
 var DailyDetail = (props) => {
   return(
-    <SingleComponentContainer>
-      <h1 className="forecast-header">{props.city}</h1>
-      <div className="col-centered">
-        <DayUI day={props.weather} background_color="#fff" icon_height={180}/>
-        <DetailDecription weather={props.weather}/>
-      </div>
-    </SingleComponentContainer>
-
+    <div id="daily-detail">
+      <SingleComponentContainer>
+        <h1 className="forecast-header">{props.city}</h1>
+        <div className="col-centered">
+          <DayUI day={props.weather} background_color="#fff" icon_height={180}/>
+          <DetailDecription weather={props.weather}/>
+        </div>
+      </SingleComponentContainer>
+    </div>
   )
 };
 
