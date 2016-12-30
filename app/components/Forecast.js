@@ -1,5 +1,6 @@
 import React from 'react'
 import DayUI from '../components/Day'
+import Loading from '../components/Loading'
 
 const ForecastUI = (props) => {
   return (
@@ -24,8 +25,8 @@ const ForecastUI = (props) => {
 const Forecast = (props) => {
   if (props.isLoading) {
     return (
-      <div>
-        <h1>LOADING</h1>
+      <div id="loading">
+        <Loading/>
       </div>
     )
   } else {

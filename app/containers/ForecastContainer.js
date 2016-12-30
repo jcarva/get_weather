@@ -1,6 +1,7 @@
 import React from 'react'
 import Forecast from '../components/Forecast'
 import { WeatherAPIHelper } from '../utils/weatherAPIHelper'
+import ParticlesParams from '../utils/particlesjs-config.json'
 
 export default class ForecastContainer extends React.Component {
   constructor(props, context) {
@@ -41,7 +42,10 @@ export default class ForecastContainer extends React.Component {
   };
 
   componentDidMount () {
-    this.forecastRequest(this.props.routeParams.city)
+    setTimeout(function () { //Only for case study
+      this.forecastRequest(this.props.routeParams.city)
+    }.bind(this),2000);
+    particlesJS("particles-js", ParticlesParams);
   }
 
   componentWillReceiveProps (nextProps) {
