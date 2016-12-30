@@ -4,7 +4,7 @@ const Button = (props) => {
   return(
     <button
       className="btn btn-lg btn-warning"
-      onClick={props.onSubmitCity}
+      type="submit"
     >{props.children}</button>
   )
 };
@@ -23,15 +23,17 @@ const InputField = (props) => {
 
 const GetCity = (props) => {
   return(
-    <div className="get-city text-center" style={{flexDirection: props.direction}}>
-      <InputField
-        onUpdateCity={props.onUpdateCity}
-        city={props.city}
-      />
-      <Button
-        onSubmitCity={props.onSubmitCity}
-      >Get Weather</Button>
-    </div>
+    <form onSubmit={props.onSubmitCity}>
+      <div className="get-city text-center" style={{flexDirection: props.direction}}>
+        <InputField
+          onUpdateCity={props.onUpdateCity}
+          city={props.city}
+        />
+        <Button
+          onSubmitCity={props.onSubmitCity}
+        >Get Weather</Button>
+      </div>
+    </form>
   )
 };
 
