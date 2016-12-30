@@ -71,11 +71,13 @@ body,
   //height: 100%
 
 .forecast-header
-  font-weight: bold
-  margin: 30px auto 0 auto
-  @media screen and (min-width: 520px)
-    font-size: 65px
-    margin: 30px auto 10px auto
+  color: #f0ad4e
+  h1
+    font-weight: bold
+    margin: 30px auto 0 auto
+    @media screen and (min-width: 520px)
+      font-size: 65px
+      margin: 30px auto 10px auto
 
 .forecast-container
   display: flex
@@ -84,6 +86,14 @@ body,
   flex-direction: row
   flex-wrap: wrap
   margin: 0 auto
+
+.forecast-daily-header
+  font-weight: bold
+  margin: 30px auto 0 auto
+  @media screen and (min-width: 520px)
+    font-size: 65px
+    margin: 30px auto 10px auto
+
 
 .daily-forecast-container
   cursor: pointer
@@ -95,16 +105,16 @@ body,
   padding: 30px
   border-radius: 8px
   h2
-    font-weight: 100
+    font-weight: bold
     @media screen and (min-width: 520px)
       font-size: 35px
 
-.col-centered
-  margin: 20px 1.5%
-  @media only screen and (max-width: 690px)
-    font-size: 0
-    float: none
-    margin: 20px auto
+#daily-detail
+  padding-top: 15px
+  .card
+    padding: 15px 5px
+    background-color: #ffffff
+    border-radius: 8px
 
 .daily-forecast-description
   justify-content: center
@@ -113,6 +123,13 @@ body,
   margin: 0
   padding: 0
   border-radius: 8px
+
+.col-centered
+  margin: 20px 1.5%
+  @media only screen and (max-width: 690px)
+    font-size: 0
+    float: none
+    margin: 20px auto
 
 #loading
   background-color: $gray_loading

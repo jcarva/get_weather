@@ -6,8 +6,10 @@ const ForecastUI = (props) => {
   return (
     <div className="container">
       <div className="row text-center">
-        <h1 className="forecast-header">{props.forecastData.city.name}</h1>
-        <h3>Select a day to see more details</h3>
+        <div className="forecast-header">
+          <h1>{props.forecastData.city.name}</h1>
+          <h2>Select a day to see more details</h2>
+        </div>
       </div>
       <div className="forecast-container">
         {props.forecastData.list.map(function (forecastDay) {

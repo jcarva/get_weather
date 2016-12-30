@@ -17,11 +17,15 @@ var DailyDetail = (props) => {
   return(
     <div id="daily-detail">
       <SingleComponentContainer>
-        <h1 className="forecast-header">{props.city}</h1>
-        <div className="col-centered">
-          <DayUI day={props.weather} background_color="#fff" icon_height={180}/>
-          <DetailDecription weather={props.weather}/>
-        </div>
+        <div className="col-lg-6 col-lg-offset-3">
+          <div className="card">
+            <h1 className="forecast-daily-header">{props.city}</h1>
+            <div className="col-centered">
+              <DayUI day={props.weather} background_color="rgb(0,0,0,255)" icon_height={180}/>
+              <DetailDecription weather={props.weather}/>
+            </div>
+          </div>
+       </div>
       </SingleComponentContainer>
     </div>
   )
