@@ -5,7 +5,7 @@ const Logo = (props) => {
   return (
     <div className="logo text-center" style={{flexDirection: props.direction}}>
       <a href="http://jaelsoncarvalho.com/get_weather">
-        <img src={sun_cloud_image} style={{maxWidth: props.size}} alt="sun_cloud_image" title="Get Weather"/>
+        <img src={sun_cloud_image} style={{maxWidth: props.size}} alt="Sun Cloud" title="Get Weather"/>
       </a>
       <h1>{props.title}</h1>
     </div>
