@@ -6,7 +6,7 @@ import { WeatherDateParser } from '../utils/weatherDateParser'
 var Day = (props) => {
   return(
     <div className="daily-forecast-container" style={{backgroundColor: props.background_color}} onClick={props.onClickDetail}>
-      <img style={{height: props.icon_height}} src={WeatherIcons[props.day.weather["0"].icon]} alt="daily weather"/>
+      <img className="img-responsive" style={{height: props.icon_height}} src={WeatherIcons[props.day.weather["0"].icon]} alt="daily weather"/>
       <h2>{WeatherDateParser(props.day.dt)}</h2>
     </div>
   )

@@ -2,12 +2,14 @@ import React from 'react'
 import DayUI from '../components/Day'
 import { SingleComponentContainer } from '../components/Containers'
 
+var UpperCaseFirst = (text) => text.charAt(0).toUpperCase() + text.substr(1);
+
 var DetailDecription = (props) => {
   return(
     <div className="row">
-      <h3><b>Description:</b> {props.weather.weather[0].description}</h3>
-      <h3><b>Min temperature:</b> {props.weather.temp.min} °C</h3>
-      <h3><b>Max temperature:</b> {props.weather.temp.max} °C</h3>
+      <h3><b>Description:</b> {UpperCaseFirst(props.weather.weather[0].description)}</h3>
+      <h3><b>Min:</b> {props.weather.temp.min} °C</h3>
+      <h3><b>Max:</b> {props.weather.temp.max} °C</h3>
       <h3><b>Humidity:</b> {props.weather.humidity}</h3>
     </div>
   )
