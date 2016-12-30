@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/jcarva/get_weather/issues"
   },
-  "homepage": "https://github.com/jcarva/get_weather#readme",
+  "homepage": "https://jcarva.github.io/get_weather",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
