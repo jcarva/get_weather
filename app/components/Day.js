@@ -7,7 +7,7 @@ var Day = (props) => {
   return(
     <div className="daily-forecast-container" style={{backgroundColor: props.background_color}} onClick={props.onClickDetail}>
       <img className="img-responsive" style={{height: props.icon_height}} src={WeatherIcons[props.day.weather["0"].icon]} alt="daily weather"/>
-      <h2>{WeatherDateParser(props.day.dt)}</h2>
+      <h3>{WeatherDateParser(props.day.dt)}</h3>
     </div>
   )
 };
@@ -22,7 +22,7 @@ Day.propTypes = {
 
 Day.defaultProps = {
   background_color: '#2b81af',
-  icon_height: 130
+  icon_height: 110
 };
 
 export default Day;

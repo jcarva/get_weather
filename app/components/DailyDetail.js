@@ -1,6 +1,5 @@
 import React from 'react'
-import DayUI from '../components/Day'
-import { SingleComponentContainer } from '../components/Containers'
+import Day from '../components/Day'
 
 var UpperCaseFirst = (text) => text.charAt(0).toUpperCase() + text.substr(1);
 
@@ -17,18 +16,16 @@ var DetailDecription = (props) => {
 
 var DailyDetail = (props) => {
   return(
-    <div id="daily-detail">
-      <SingleComponentContainer>
+    <div id="daily-detail" className="text-center">
         <div className="col-lg-6 col-lg-offset-3">
           <div className="card">
             <h1 className="forecast-daily-header">{props.city}</h1>
             <div className="col-centered">
-              <DayUI day={props.weather} background_color="rgb(0,0,0,255)" icon_height={180}/>
+              <Day day={props.weather} background_color="rgb(0,0,0,255)" icon_height={60}/>
               <DetailDecription weather={props.weather}/>
             </div>
           </div>
        </div>
-      </SingleComponentContainer>
     </div>
   )
 };
