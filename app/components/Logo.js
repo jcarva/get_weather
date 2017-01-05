@@ -1,12 +1,13 @@
 import React from 'react'
+import { IndexLink } from 'react-router'
 const sun_cloud_image = require('../assets/images/logo.png');
 
 const Logo = (props) => {
   return (
     <div className="logo text-center" style={{flexDirection: props.direction}}>
-      <a href="http://jaelsoncarvalho.com/get_weather">
+      <IndexLink to="/" >
         <img src={sun_cloud_image} style={{maxWidth: props.size}} alt="Sun Cloud" title="Get Weather"/>
-      </a>
+      </IndexLink>
       <h1>{props.title}</h1>
     </div>
   )

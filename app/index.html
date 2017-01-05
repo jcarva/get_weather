@@ -21,42 +21,17 @@
 </head>
 <body>
     <div id="app"></div>
+    <!-- Latest compiled and minified TweenMax to canvas component -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
-
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function(){
-            function checkDOMChange()
-            {
-                if (document.getElementById("forecast")) {
-                    var menu_height = $("#menu").height();
-                    var forecast_height = $("#forecast").height();
-                    $("#particles-js").height(menu_height + forecast_height);
-                }
-
-                if (document.getElementById("daily-detail")) {
-                    var menu_height = $("#menu").height();
-                    var window_height = $(window).height();
-                    var daily_detail_height = $("#daily-detail").height();
-                    var particles = $("#particles-js");
-
-                    (window_height > menu_height + daily_detail_height)
-                            ? particles.height(window_height)
-                            : particles.height(menu_height + daily_detail_height + 15)
-
-                }
-                setTimeout( checkDOMChange, 100 );
-            }
-
-            checkDOMChange();
+        $(document).ready(function() {
+            $('#navbar-collapse > form > div > button').click(function () {
+                $('.navbar-toggle:visible').click();
+            });
         });
     </script>
 </body>

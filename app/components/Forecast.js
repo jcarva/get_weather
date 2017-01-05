@@ -1,21 +1,23 @@
 import React from 'react'
-import DayUI from '../components/Day'
+import Day from '../components/Day'
 import Loading from '../components/Loading'
 
 const ForecastUI = (props) => {
   return (
     <div className="container">
       <div className="row text-center">
-        <div className="forecast-header">
-          <h1>{props.forecastData.city.name}</h1>
-          <h2>Select a day to see more details</h2>
+        <div className="col-lg-4 col-lg-offset-4">
+          <div className="forecast-header">
+            <h1>{props.forecastData.city.name}</h1>
+            <h2>Select a day to see more details</h2>
+          </div>
         </div>
       </div>
       <div className="forecast-container">
         {props.forecastData.list.map(function (forecastDay) {
           return (
             <div className="col-lg-3 col-centered">
-              <DayUI key={forecastDay.dt} day={forecastDay} onClickDetail={props.onClickDetail.bind(null, forecastDay)}/>
+              <Day key={forecastDay.dt} day={forecastDay} onClickDetail={props.onClickDetail.bind(null, forecastDay)}/>
             </div>
           )
         })}
