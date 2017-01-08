@@ -29,8 +29,10 @@
 
     <script>
         $(document).ready(function() {
-            $('.get-city > button').click(function () {
-                $('.navbar-toggle:visible').click();
+            $(document).click(function(e) {
+                if (!$(e.target).is('#navbar-collapse > form > div > input')) {
+                    $('.collapse').collapse('hide');
+                }
             });
         });
     </script>

@@ -4,14 +4,14 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2?t
 ---
 
 <a href="http://jaelsoncarvalho.com/get_weather/">
-    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun_cloud_image" title="GetWeather" align="right" />
+    <img style="max-width: 13%" src="https://raw.githubusercontent.com/jcarva/get_weather/master/app/assets/images/logo.png" alt="sun_cloud_image" title="GetWeather" align="right" />
 </a>
 
 **Pet-project. Use at your own risk. Low test coverage ratio.**
 
 # GetWeather
 
-An application to get informations about the weather forecast anywhere on the easier way. Built using the Single Page Application (SPA) concept, this project is a introduction to the contributors learn [React](https://facebook.github.io/react/) and get practice about its concepts. Using basic components and API's requests/responses we can show a very functional application.
+An application to get informations about the weather forecast anywhere on the easier way. Built using the Single Page Application (SPA) concept, this project is a introduction to the contributors learn [React](https://facebook.github.io/react/)(a javascript library for building user interfaces) and get practice about its concepts. The simple style and designer of the application was thought and made to be performed by mobiles, but it is also supported by devices of all shapes. Using basic components and API's requests/responses we can show a very functional application.
 
 Actually hosted on: http://jaelsoncarvalho.com/get_weather/
 
@@ -47,7 +47,7 @@ $ npm install
 
 ## Development
 
-Excuting the above command the project will be accessible on: http://localhost:8080
+Excuting the below command the project will be accessible on: http://localhost:8080
 
 ```bash
 $ npm run start

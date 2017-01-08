@@ -2,7 +2,7 @@ import React from 'react'
 import Day from '../components/Day'
 import Loading from '../components/Loading'
 
-const ForecastUI = (props) => {
+const ForecastCard = (props) => {
   return (
     <div className="container">
       <div className="row text-center">
@@ -15,11 +15,7 @@ const ForecastUI = (props) => {
       </div>
       <div className="forecast-container">
         {props.forecastData.list.map(function (forecastDay) {
-          return (
-            <div className="col-lg-3 col-centered">
-              <Day key={forecastDay.dt} day={forecastDay} onClickDetail={props.onClickDetail.bind(null, forecastDay)}/>
-            </div>
-          )
+          return <Day key={forecastDay.dt} day={forecastDay} onClickDetail={props.onClickDetail.bind(null, forecastDay)}/>
         })}
       </div>
     </div>
@@ -36,7 +32,7 @@ const Forecast = (props) => {
   } else {
     return (
       <div id="forecast">
-        <ForecastUI forecastData={props.forecastData} onClickDetail={props.onClickDetail}/>
+        <ForecastCard forecastData={props.forecastData} onClickDetail={props.onClickDetail}/>
       </div>
     )
   }

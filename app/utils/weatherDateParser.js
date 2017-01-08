@@ -27,5 +27,5 @@ export const WeatherDateParser = (rawData) => {
   var date = new Date(rawData * 1000);
   var day = daysMap[date.getDay()];
   var month = monthsMap[date.getMonth()] + ' ' + date.getDate();
-  return day + ', ' + month;
+  return [day, month];
 };

@@ -1,10 +1,10 @@
 import React from 'react'
-import DailyDetail from '../components/DailyDetail'
+import DetailedDay from '../components/DetailedDay'
 
 export default class DailyDetailContainer extends React.Component {
   render() {
     return(
-      <DailyDetail
+      <DetailedDay
         weather={this.props.location.state.weather}
         city={this.props.location.state.city}
       />

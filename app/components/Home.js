@@ -5,7 +5,7 @@ import Logo from './Logo'
 const Home = (props) => {
     return(
       <div id="home">
-        <Logo size="40%" title="Enter a City and State" direction="column"/>
+        <Logo size="40%" title="Enter a City and Country" direction="column"/>
         <GetCityContainer/>
       </div>
     )
