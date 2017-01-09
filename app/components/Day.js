@@ -10,7 +10,13 @@ const Day = (props) => {
         <h3>{date[0].substr(0, 3).toUpperCase()}</h3>
         <h3>{date[1]}</h3>
         <img className="img-responsive" style={{height: props.icon_height}} src={WeatherIconsMaterial[props.day.weather["0"].icon]} alt="daily weather"/>
-        <h4>{props.day.temp.day} °C</h4>
+        <div className="day-temperature">
+          <h4>{props.day.temp.day} °C</h4>
+        </div>
+        <div className="max-min-temperature">
+          <h4>{props.day.temp.max} °C</h4>
+          <h4>{props.day.temp.min} °C</h4>
+        </div>
       </div>
     </div>
   )
