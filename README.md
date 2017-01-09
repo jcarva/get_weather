@@ -3,10 +3,6 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2?t
 
 ---
 
-<a href="http://jaelsoncarvalho.com/get_weather/">
-    <img style="max-width: 13%" src="https://raw.githubusercontent.com/jcarva/get_weather/master/app/assets/images/logo.png" alt="sun_cloud_image" title="GetWeather" align="right" />
-</a>
-
 **Pet-project. Use at your own risk. Low test coverage ratio.**
 
 # GetWeather
