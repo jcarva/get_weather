@@ -11,6 +11,7 @@ const ForecastCard = (props) => {
         <div className="col-lg-12">
           <div className="forecast-header">
             <h1>{props.weatherData.main.temp} °C in {props.weatherData.name}</h1>
+              <h2>{UpperCaseFirst(props.weatherData.weather[0].description)}</h2>
               <img className="img-responsive" style={{height: 60}} src={WeatherIconsMaterial[props.weatherData.weather["0"].icon]} alt="daily weather"/>
             <table style={{width: "100%"}}>
               <tbody>
@@ -43,7 +44,6 @@ const Forecast = (props) => {
       </div>
     )
   } else {
-    console.log(props);
     return (
       <div id="forecast">
         <ForecastCard weatherData={props.weatherData} forecastData={props.forecastData} onClickDetail={props.onClickDetail}/>
