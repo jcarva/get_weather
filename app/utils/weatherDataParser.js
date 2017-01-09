@@ -29,3 +29,10 @@ export const WeatherDateParser = (rawData) => {
   var month = monthsMap[date.getMonth()] + ' ' + date.getDate();
   return [day, month];
 };
+
+export const WeatherTimeParser = (rawData) => {
+  var date = new Date(rawData * 1000);
+  var hour = date.getHours();
+  var minutes = date.getMinutes();
+  return hour + ":" + minutes;
+};
