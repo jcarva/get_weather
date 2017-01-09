@@ -1,6 +1,6 @@
 import React from 'react'
 import { WeatherIconsMaterial } from '../utils/weatherIcons'
-import { WeatherDateParser } from '../utils/weatherDateParser'
+import { WeatherDateParser } from '../utils/weatherDataParser'
 
 const Day = (props) => {
   var date = WeatherDateParser(props.day.dt);

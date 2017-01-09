@@ -50,6 +50,26 @@ body
       font-size: 9vw
       margin-left: 0
 
+#current-location
+  position: absolute
+  left: 0
+  top: 68px
+  z-index: 1
+  -webkit-user-select: none
+  margin-top: 4px
+  margin-left: 5px
+  border-radius: 8px
+  color: #fff100
+  font-size: 28px
+  background-color: rgba(2, 66, 135, 0.67)
+  span
+    margin: 6px 5px 0 4px
+
+.popover
+  top: 64px !important
+  left: 43px !important
+  font-weight: bold
+
 #home
   display: flex
   justify-content: center
@@ -87,7 +107,7 @@ body
 
 .day-card-centered
   cursor: pointer
-  margin: 3vh auto
+  margin: 3vh auto 1vh auto
   img
     display: block
     margin: auto
@@ -101,20 +121,38 @@ body
   background-repeat: repeat
 
 .forecast-header
-  color: #fff100
-  h1
-    font-weight: bold
-    margin: 30px auto 0 auto
-    @media screen and (min-width: 520px)
-      font-size: 65px
-      margin: 30px auto 10px auto
-  h2
-    @media screen and (max-width: 520px)
-      font-size: 20px
-
-.forecast-container
   background-color: orange
   border-radius: 9px
+  margin: 3vw auto 2px auto
+  padding: 0.15vw 0.4vw 1vh 0.4vw
+  h1
+    font-weight: bold
+    margin: 2vh auto 0 auto
+    @media screen and (min-width: 520px)
+      font-size: 65px
+      margin: 4vh auto 10px auto
+    @media screen and (max-width: 520px)
+      font-size: 7.5vw
+  h2
+    font-weight: bold
+    margin: 0 auto
+    @media screen and (max-width: 520px)
+      font-size: 5vw
+  img
+    display: block
+    margin: 5px auto
+
+.forecast-container-wrapper
+  padding-top: 1vh
+  background-color: orange
+  border-radius: 9px
+  text-align: center
+  h2
+    margin: 2px auto 0 auto
+    @media screen and (max-width: 520px)
+      font-size: 5vw
+
+.forecast-container
   display: flex
   justify-content: space-between
   align-items: center
@@ -306,33 +344,6 @@ body
     100%
       transform: rotate(360deg)
 
-
-/* ---- particles.js container ----
-canvas
-  display: block
-  vertical-align: bottom
-
-#particles-js
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  z-index: -1
-  background-color: #024287
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: 50% 50%
-
-/* ---- end ----
-
-////full canvas-background
-//canvas
-//  position: absolute
-//  top: 0
-//  left: 0
-//  width: 100%
-//  height: 100%
-//  z-index: -1
 
 .example-enter
   opacity: 0

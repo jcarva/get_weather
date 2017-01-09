@@ -1,8 +1,6 @@
 import React from 'react'
 import { WeatherIcons } from '../utils/weatherIcons'
-import { WeatherDateParser } from '../utils/weatherDateParser'
-
-var UpperCaseFirst = (text) => text.charAt(0).toUpperCase() + text.substr(1);
+import { WeatherDateParser, UpperCaseFirst } from '../utils/weatherDataParser'
 
 const DetailDay = (props) => {
   var date = WeatherDateParser(props.day.dt);
@@ -20,38 +18,36 @@ const DetailDecription = (props) => {
       <h3>{UpperCaseFirst(props.weather.weather[0].description)}</h3>
       <div className="col-lg-4 col-lg-offset-4">
         <table className="center" style={{width: "100%"}}>
-          <tr>
-            <td><h4><b>Min:</b></h4></td>
-            <td><h4> {props.weather.temp.min} °C</h4></td>
-          </tr>
-          <tr>
-            <td><h4><b>Max:</b></h4></td>
-            <td><h4> {props.weather.temp.max} °C</h4></td>
-          </tr>
-          <tr>
-            <td><h4><b>Morning:</b></h4></td>
-            <td><h4> {props.weather.temp.morn} °C</h4></td>
-          </tr>
-          <tr>
-            <td><h4><b>Evening:</b></h4></td>
-            <td><h4> {props.weather.temp.eve} °C</h4></td>
-          </tr>
-          <tr>
-            <td><h4><b>Night:</b></h4></td>
-            <td><h4> {props.weather.temp.night} °C</h4></td>
-          </tr>
-          <tr>
-            <td><h4><b>Cloudiness:</b></h4></td>
-            <td><h4> {props.weather.clouds}%</h4></td>
-          </tr>
-          <tr>
-            <td><h4><b>Humidity:</b></h4></td>
-            <td><h4> {props.weather.humidity}%</h4></td>
-          </tr>
-          <tr>
-            <td><h4><b>Wind Speed:</b></h4></td>
-            <td><h4> {(props.weather.speed * 3.6).toFixed(2)} Km/h</h4></td>
-          </tr>
+          <tbody>
+            <tr>
+              <td><h4><b>Min:</b></h4></td>
+              <td><h4> {props.weather.temp.min} °C</h4></td>
+            </tr>
+            <tr>
+              <td><h4><b>Max:</b></h4></td>
+              <td><h4> {props.weather.temp.max} °C</h4></td>
+            </tr>
+            <tr>
+              <td><h4><b>Morning:</b></h4></td>
+              <td><h4> {props.weather.temp.morn} °C</h4></td>
+            </tr>
+            <tr>
+              <td><h4><b>Evening:</b></h4></td>
+              <td><h4> {props.weather.temp.eve} °C</h4></td>
+            </tr>
+            <tr>
+              <td><h4><b>Night:</b></h4></td>
+              <td><h4> {props.weather.temp.night} °C</h4></td>
+            </tr>
+            <tr>
+              <td><h4><b>Humidity:</b></h4></td>
+              <td><h4> {props.weather.humidity}%</h4></td>
+            </tr>
+            <tr>
+              <td><h4><b>Wind Speed:</b></h4></td>
+              <td><h4> {(props.weather.speed * 3.6).toFixed(2)} Km/h</h4></td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
@@ -59,7 +55,6 @@ const DetailDecription = (props) => {
 };
 
 const DailyDetail = (props) => {
-  console.log(props);
   return(
     <div id="daily-detail" className="text-center">
         <div className="col-lg-6 col-lg-offset-3">
