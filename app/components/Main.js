@@ -1,6 +1,6 @@
 import React from 'react'
-import GetCityContainer from '../containers/GetCityContainer'
 import Logo  from './Logo'
+import GetCityContainer from '../containers/GetCityContainer'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 require("../assets/sass/style.css");
 

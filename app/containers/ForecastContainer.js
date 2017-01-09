@@ -7,8 +7,10 @@ export default class ForecastContainer extends React.Component {
     super(props, context);
 
     this.state = {
-      isLoading: true,
-      forecastData: {}
+      isLoadingForecast: true,
+      isLoadingWeather: true,
+      forecastData: {},
+      weatherData: {}
     };
 
     /*
@@ -34,16 +36,27 @@ export default class ForecastContainer extends React.Component {
     WeatherAPIHelper.getCityForecast(city)
       .then(function (cityForecastData) {
         this.setState({
-          isLoading: false,
+          isLoadingForecast: false,
           forecastData: cityForecastData
+        });
+      }.bind(this))
+  };
+
+  weatherRequest = (city) => {
+    WeatherAPIHelper.getCurrentCityWeather(city)
+      .then(function (cityWeatherData) {
+        this.setState({
+          isLoadingWeather: false,
+          weatherData: cityWeatherData
         });
       }.bind(this))
   };
 
   componentDidMount () {
     setTimeout(function () { //Only for case study
-      this.forecastRequest(this.props.routeParams.city)
-    }.bind(this),2000);
+      this.forecastRequest(this.props.routeParams.city);
+      this.weatherRequest(this.props.routeParams.city);
+    }.bind(this),1000);
   }
 
   componentWillReceiveProps (nextProps) {
@@ -53,8 +66,10 @@ export default class ForecastContainer extends React.Component {
   render() {
     return(
       <Forecast
-        isLoading={this.state.isLoading}
+        isLoadingForecast={this.state.isLoadingForecast}
+        isLoadingWeather={this.state.isLoadingWeather}
         forecastData={this.state.forecastData}
+        weatherData={this.state.weatherData}
         onClickDetail={this.handleClickDetail}
       />
     )

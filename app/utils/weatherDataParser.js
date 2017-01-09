@@ -27,5 +27,18 @@ export const WeatherDateParser = (rawData) => {
   var date = new Date(rawData * 1000);
   var day = daysMap[date.getDay()];
   var month = monthsMap[date.getMonth()] + ' ' + date.getDate();
-  return day + ', ' + month;
+  return [day, month];
 };
+
+export const WeatherTimeParser = (rawData) => {
+  var date = new Date(rawData * 1000);
+  var hour = date.getHours().toString();
+  var minutes = date.getMinutes().toString();
+
+  if(hour.length == 1) hour = "0" + hour;
+  if(minutes.length == 1) minutes = "0" + minutes;
+
+  return hour + ":" + minutes;
+};
+
+export const UpperCaseFirst = (text) => text.charAt(0).toUpperCase() + text.substr(1);

@@ -14,7 +14,6 @@ const Logo = (props) => {
 };
 
 Logo.propTypes = {
-  size: React.PropTypes.number,
   direction: React.PropTypes.string,
   title: React.PropTypes.string
 };
