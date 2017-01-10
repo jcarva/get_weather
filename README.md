@@ -26,7 +26,7 @@ Actually hosted on: http://jaelsoncarvalho.com/get_weather/
 
 ##API
 
-This applications consumes datas from the follow services:
+This applications consumes datas from the following services:
 
 * [OpenWeatherMap](https://openweathermap.org) - Informations about the weather, including precipitation, clouds, pressure, temperature, wind, and many more.
 
@@ -43,7 +43,7 @@ $ npm install
 
 ## Development
 
-Excuting the below command the project will be accessible on: http://localhost:8080
+Executing the below command the project will be accessible on: http://localhost:8080
 
 ```bash
 $ npm run start
