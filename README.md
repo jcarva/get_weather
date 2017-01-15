@@ -46,7 +46,7 @@ $ npm install
 Executing the below command the project will be accessible on: http://localhost:8080
 
 ```bash
-$ npm run start
+$ npm run dev
 ```
 ---
 
