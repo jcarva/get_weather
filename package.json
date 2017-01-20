@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --content-base --history-api-fallback",
     "build": "webpack -p",
-    "start": "npm run build&&node server.js",
+    "start": "node server.js",
     "gh-deploy": "npm run build&&gh-pages -d build"
   },
   "repository": {
@@ -39,11 +39,13 @@
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.9.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.15.0"
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "express": "^4.14.0",
     "react": "^15.2.1",
     "react-addons-css-transition-group": "^15.4.1",
     "react-dom": "^15.2.1",

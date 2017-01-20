@@ -7,13 +7,13 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2?t
 
 # GetWeather
 
-An application to get informations about the weather forecast anywhere on the easier way. Built using the Single Page Application (SPA) concept, this project is a introduction to the contributors learn [React](https://facebook.github.io/react/)(a javascript library for building user interfaces) and get practice about its concepts. The simple style and designer of the application was thought and made to be performed by mobiles, but it is also supported by devices of all shapes. Using basic components and API's requests/responses we can show a very functional application.
+An application to get informations about the weather forecast anywhere on the easier way. Built using the Single Page Application(SPA) and Progressive Web App concepts, this project is a introduction to the contributors learn [React](https://facebook.github.io/react/)(a javascript library for building user interfaces) and get practice about its concepts. The simple style and designer of the application was thought and made to be performed by mobiles, but it is also supported by devices of all shapes. Using basic components and API's requests/responses we can show a very functional application.
 
 Actually hosted on: http://jaelsoncarvalho.com/get_weather/
 
 ---
 
-## Technologies
+## Stack
 
 * [Node.js](https://nodejs.org) (v6.2.2)
 * [npm](https://www.npmjs.com) (3.9.5)
@@ -43,20 +43,30 @@ $ npm install
 
 ## Development
 
-Executing the below command the project will be accessible on: http://localhost:8080
+Executing the below command the project will be accessible on: http://localhost:8080.
 
 ```bash
 $ npm run dev
 ```
 ---
 
-## Production
+## Build
 
 This command is used to build the production files.
 
 ```bash
 $ npm run build
 ```
+---
+
+## Production
+
+The below command runs a server with the production files, accessible on: http://localhost:3000.
+
+```bash
+$ npm run start
+```
+
 ---
 
 ## Contributing
