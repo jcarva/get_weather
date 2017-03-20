@@ -2,7 +2,7 @@ import React from 'react'
 import Logo  from './Logo'
 import GetCityContainer from '../containers/GetCityContainer'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-require("../assets/sass/style.css");
+require('../assets/sass/style.css');
 
 const NavigationBar = (props) => {
   return (

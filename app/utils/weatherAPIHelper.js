@@ -3,16 +3,16 @@ import Axios from 'axios'
 const base_url_api = 'http://api.openweathermap.org/data/2.5/';
 const api_key = '1c03cb992b00253b570f4d85483502fc';
 
-var setQueryData = (city) => {
-  var queryData = {
+const setQueryData = (city) => {
+  const queryData = {
     APPID: api_key,
     units: 'metric',
     type: 'accurate',
     cnt: 6
   };
 
-  if(city.includes("$")) {
-    var coordinates = city.split("$");
+  if(city.includes('$')) {
+    const coordinates = city.split('$');
     queryData.lat = coordinates[0];
     queryData.lon = coordinates[1];
   }

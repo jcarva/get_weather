@@ -20,27 +20,27 @@ export default class CurrentLocationContainer extends React.Component {
   }
 
   handleUpdateCity = (position) => {
-    var latitude = position.coords.latitude.toString();
-    var longitude = position.coords.longitude.toString();
+    const latitude = position.coords.latitude.toString();
+    const longitude = position.coords.longitude.toString();
     this.setState ({
-      city: latitude + "$" + longitude
+      city: latitude + '$' + longitude
     });
   };
 
   errorHandler =(err) => {
     if(err.code == 1) {
-      alert("Error: Access is denied!");
+      alert('Error: Access is denied!');
     }
 
     else if( err.code == 2) {
-      alert("Error: Position is unavailable!");
+      alert('Error: Position is unavailable!');
     }
   };
 
   handleClickLocation = () => {
     if(navigator.geolocation){
       // timeout at 60000 milliseconds (60 seconds)
-      var options = {timeout:60000};
+      const options = {timeout:60000};
       navigator.geolocation.getCurrentPosition(this.handleUpdateCity, this.errorHandler, options);
 
       setTimeout(function () {
@@ -50,14 +50,14 @@ export default class CurrentLocationContainer extends React.Component {
       }.bind(this),1000);
     }
     else{
-      alert("Sorry, browser does not support geolocation!");
+      alert('Sorry, browser does not support geolocation!');
     }
   };
 
   componentDidMount () {
     $(document).ready(function() {
       setTimeout(function () {
-        $('[data-toggle="popover"]').popover("show")
+        $('[data-toggle="popover"]').popover('show')
       }.bind(this),1000);
 
       setTimeout(function () {

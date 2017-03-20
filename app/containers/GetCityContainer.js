@@ -14,7 +14,7 @@ export default class GetCityContainer extends React.Component {
     super(props, context);
 
     this.state = {
-      city: 'London, England'
+      city: 'Budapest, Hungary'
     };
 
     /*

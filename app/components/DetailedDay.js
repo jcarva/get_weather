@@ -3,11 +3,11 @@ import { WeatherIcons } from '../utils/weatherIcons'
 import { WeatherDateParser, UpperCaseFirst } from '../utils/weatherDataParser'
 
 const DetailDay = (props) => {
-  var date = WeatherDateParser(props.day.dt);
+  const date = WeatherDateParser(props.day.dt);
   return(
     <div className="daily-forecast-container" style={{backgroundColor: props.background_color}}>
       <h3>{date[0] + ', ' + date[1]}</h3>
-      <img className="img-responsive" style={{height: props.icon_height}} src={WeatherIcons[props.day.weather["0"].icon]} alt="daily weather"/>
+      <img className="img-responsive" style={{height: props.icon_height}} src={WeatherIcons[props.day.weather['0'].icon]} alt="daily weather"/>
     </div>
   )
 };
@@ -17,7 +17,7 @@ const DetailDecription = (props) => {
     <div className="row">
       <h3>{UpperCaseFirst(props.weather.weather[0].description)}</h3>
       <div className="col-lg-4 col-lg-offset-4">
-        <table className="center" style={{width: "100%"}}>
+        <table className="center" style={{width: '100%'}}>
           <tbody>
             <tr>
               <td><h4><b>Min:</b></h4></td>
