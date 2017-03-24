@@ -14,11 +14,11 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/build',
-    filename: "bundle.js"
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
-      { test: /\.json$/, loader: "json-loader" },
+      { test: /\.json$/, loader: 'json-loader' },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.css$/, loaders: ['style', 'css'] },
       { test: /\.scss$/, loaders: ['style', 'css', 'sass'] },

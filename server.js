@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 // Files path
-const files_path = __dirname + "/build";
+const files_path = __dirname + '/build';
 
 // Express static server
 app.use(express.static(path.join(files_path)));
