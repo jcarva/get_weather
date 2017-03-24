@@ -4,7 +4,7 @@
   "description": "Simple project to learn about React.js and its concepts.",
   "main": "index.js",
   "scripts": {
-    "lint": "node_modules/.bin/eslint app",
+    "eslint": "node_modules/.bin/eslint app",
     "dev": "webpack-dev-server --inline --content-base --history-api-fallback",
     "build": "webpack -p --config ./webpack.config.js --progress",
     "postinstall": "webpack -p --config ./webpack.prod.config.js --progress",
