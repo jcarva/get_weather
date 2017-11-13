@@ -13,7 +13,7 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2),
 
 An application to get information about the weather forecast of anywhere on the easiest way. Built using the Single Page Application(SPA) and Progressive Web App concepts, with [React](https://facebook.github.io/react/)(a javascript library for building user interfaces) and its concepts. The simple style and designer of the application was thought and made to be performed by mobiles, but it is also supported by devices of all shapes. Using basic components and API's requests/responses we can show a very functional application.
 
-Actually hosted on: http://jaelsoncarvalho.com/get_weather/
+Actually hosted on: http://get-weather.s3-website.us-east-2.amazonaws.com
 
 ---
 
